@@ -601,7 +601,7 @@
       overflow: visible;
     }
     .feedback-preview h3 {
-      margin: 0 0 8px;
+      margin: 0 0 16px;
       max-width: 340px;
       color: var(--navy);
       font-size: 27px;
@@ -618,11 +618,13 @@
       box-shadow: 0 18px 42px rgba(8,29,53,.1);
     }
     .feedback-promise {
-      position: relative;
-      width: min(300px, 100%);
-      margin: -2px 0 14px auto;
+      position: absolute;
+      top: 40px;
+      right: -178px;
+      width: 160px;
+      margin: 0;
       padding-right: 8px;
-      transform: rotate(-.8deg);
+      transform: rotate(-2.5deg);
       color: #1b1f24;
       font-family: "Permanent Marker", "Marker Felt", "Arial Rounded MT Bold", sans-serif;
       text-transform: uppercase;
@@ -631,10 +633,10 @@
     }
     .feedback-promise-arrow {
       position: absolute;
-      left: -48px;
-      top: 18px;
-      width: 42px;
-      height: 40px;
+      left: -38px;
+      top: 46px;
+      width: 36px;
+      height: 34px;
       overflow: visible;
       opacity: .55;
     }
@@ -1236,15 +1238,15 @@
     }
     .package-options {
       display: grid;
-      gap: 12px;
+      gap: 10px;
       margin: 2px 0 4px;
     }
     .package-option {
       display: grid;
       grid-template-columns: auto 1fr;
-      gap: 12px;
-      align-items: start;
-      padding: 14px;
+      gap: 10px;
+      align-items: center;
+      padding: 12px 13px;
       border: 1px solid #d7dde6;
       border-radius: 12px;
       background: rgba(250,247,242,.5);
@@ -1257,7 +1259,7 @@
       box-shadow: 0 0 0 3px rgba(231,190,112,.14);
     }
     .package-option input {
-      margin-top: 4px;
+      margin: 0;
       accent-color: var(--navy);
     }
     .package-option strong {
@@ -1265,9 +1267,13 @@
       align-items: baseline;
       justify-content: space-between;
       gap: 14px;
-      margin-bottom: 4px;
+      margin-bottom: 2px;
       color: var(--navy);
       font-size: 14px;
+    }
+    .package-option .muted {
+      display: block;
+      line-height: 1.38;
     }
     .package-price {
       color: var(--gold-dark);
@@ -1366,17 +1372,132 @@
     @keyframes pulse { 50% { opacity: .2; } }
     @keyframes introRise { to { opacity: 1; transform: translateY(0); } }
     @media (max-width: 820px) {
+      body { overflow-x: hidden; }
       html { scroll-padding-top: 78px; }
       .navlinks { display: none; }
-      .topbar { padding: 16px 18px; }
+      .topbar {
+        gap: 12px;
+        padding: 14px 16px;
+      }
       .brand .logo-mark { width: 34px; height: 40px; }
       .brand .logo-wordmark strong,
       .brand .logo-wordmark span { font-size: 19px; }
-      .topbar .btn { padding: 11px 18px; }
+      .topbar .btn {
+        flex: 0 0 auto;
+        padding: 10px 14px;
+        border-radius: 9px;
+        font-size: 13px;
+      }
       .studio-lockup::before, .studio-lockup::after { display: none; }
-      .grid-3, .about-grid, .contact-grid { grid-template-columns: 1fr; }
-      .hero { padding-top: 128px; }
+      .grid-3, .about-grid, .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+      .hero {
+        padding: 112px 18px 54px;
+      }
+      body.intro-active .hero {
+        min-height: 100svh;
+        padding: 112px 18px 54px;
+      }
+      .hero h1 {
+        font-size: clamp(38px, 12vw, 56px);
+        line-height: 1.04;
+      }
+      .studio-lockup {
+        margin-bottom: 18px;
+      }
+      .studio-lockup > span {
+        font-size: 27px;
+      }
+      .typewriter {
+        min-height: 92px;
+        white-space: normal;
+        text-align: center;
+        font-size: clamp(34px, 11vw, 48px);
+        line-height: 1.05;
+      }
+      .scribble {
+        left: 6%;
+        width: 88%;
+        bottom: -18px;
+      }
+      .hero p {
+        font-size: 15px;
+        line-height: 1.55;
+      }
+      .badge {
+        align-items: flex-start;
+        border-radius: 14px;
+        padding: 10px 14px;
+        font-size: 13px;
+        line-height: 1.45;
+      }
+      .section {
+        padding: 56px 18px;
+      }
+      .section-title {
+        margin-bottom: 28px;
+      }
+      .section-title h2 {
+        font-size: clamp(31px, 9vw, 38px);
+        line-height: 1.08;
+      }
+      .service-card,
+      .process-card,
+      .contact-card,
+      .bio-card,
+      .feedback-preview {
+        border-radius: 14px;
+      }
+      .service-card {
+        min-height: auto;
+        padding: 22px;
+      }
+      .service-card.featured-service,
+      .service-card.featured-service:hover {
+        transform: none;
+      }
+      .service-card.featured-service::before {
+        inset: -4px;
+        border-radius: 18px;
+        opacity: .5;
+      }
+      .service-card h3,
+      .service-card > .muted,
+      .service-card .points {
+        min-height: 0;
+      }
+      .process-card {
+        padding: 24px 20px;
+      }
+      .marquee {
+        padding: 14px 0 15px;
+      }
+      .marquee-row {
+        gap: 26px;
+        padding-right: 26px;
+      }
+      .logo-pill {
+        height: 68px;
+      }
+      .morehead-cain-logo { height: 30px; max-width: 220px; }
+      .unc-official-logo { height: 46px; max-width: 290px; }
+      .duke-logo { height: 42px; max-width: 165px; }
+      .wake-logo { height: 44px; max-width: 250px; }
+      .usc-logo { height: 38px; max-width: 135px; }
+      .richmond-logo { height: 42px; max-width: 220px; }
+      .nc-state-logo { height: 50px; max-width: 220px; }
+      .charleston-fellows-logo {
+        height: 68px;
+        max-width: 360px;
+        margin-right: -44px;
+      }
       .selected-service-card { position: static; }
+      .about-copy > h2 {
+        font-size: clamp(33px, 10vw, 42px) !important;
+        line-height: 1.06;
+      }
       .about-headshot {
         position: static;
         display: block;
@@ -1402,18 +1523,49 @@
         display: none;
       }
       .feedback-preview {
+        padding: 18px;
         margin-right: 0;
       }
+      .feedback-preview h3 {
+        max-width: none;
+        font-size: 30px;
+      }
+      .feedback-sheet {
+        border-radius: 12px;
+      }
+      .docs-toolbar {
+        padding: 9px 10px;
+      }
+      .docs-title {
+        font-size: 11px;
+      }
+      .docs-tools {
+        gap: 4px;
+      }
+      .docs-tool {
+        width: 16px;
+      }
+      .docs-mode {
+        padding: 3px 7px;
+        font-size: 9px;
+      }
       .docs-workspace {
-        padding-right: 18px;
+        min-height: 0;
+        padding: 14px;
+        padding-right: 14px;
       }
       .doc-page {
         width: auto;
+        min-height: 0;
+        padding: 18px 16px;
       }
       .comment-rail {
         position: static;
+        display: grid;
+        gap: 10px;
         width: auto;
-        padding-top: 0;
+        height: auto;
+        padding-top: 12px;
         margin-right: 0;
       }
       .feedback-sheet {
@@ -1425,6 +1577,12 @@
         left: auto;
         width: 100%;
         transform: none !important;
+      }
+      .comment-rail:hover .feedback-note,
+      .docs-workspace:has(.draft-line.highlight:hover) .feedback-note,
+      .docs-workspace:has(.final-feedback-block:hover) .feedback-note {
+        opacity: 1;
+        filter: none;
       }
       .draft-line.highlight::after,
       .final-feedback-block::after {
@@ -1438,8 +1596,74 @@
         bottom: 16px;
         width: calc(100vw - 32px);
       }
+      .contact-page {
+        padding: 24px 18px 64px;
+      }
+      .contact-heading {
+        text-align: left;
+      }
+      .service-picker,
+      .contact-subtitle {
+        max-width: none;
+      }
+      .service-picker label {
+        text-align: left;
+      }
+      .service-snapshot,
+      .essay-count-options {
+        grid-template-columns: 1fr;
+      }
       .footer-inner { flex-direction: column; }
       .footer-links { justify-content: center; }
+    }
+    @media (max-width: 520px) {
+      .brand .logo-mark {
+        width: 28px;
+        height: 34px;
+      }
+      .brand {
+        gap: 8px;
+      }
+      .brand .logo-wordmark strong,
+      .brand .logo-wordmark span {
+        font-size: 17px;
+      }
+      .topbar .btn {
+        padding: 9px 11px;
+        font-size: 12px;
+      }
+      .hero h1 br,
+      .hero p br {
+        display: none;
+      }
+      .hero .btn {
+        width: 100%;
+        max-width: 330px;
+        padding: 16px 20px !important;
+      }
+      .service-graphic {
+        width: 46px;
+        height: 46px;
+      }
+      .about-tabs {
+        width: 100%;
+      }
+      .about-tab-label {
+        flex: 1;
+        text-align: center;
+        font-size: 11px;
+        padding: 9px 8px;
+      }
+      .about-panels {
+        min-height: 0;
+      }
+      .bio-card.has-headshot {
+        padding-top: 20px;
+      }
+      .package-option strong {
+        display: grid;
+        gap: 4px;
+      }
     }
   </style>
 </head>
@@ -1587,23 +1811,6 @@
               </div>
             </div>
           </div>
-          <div class="review-takeaway-card">
-            <p class="eyebrow" style="color:var(--gold-dark)">After the Review</p>
-            <div class="takeaway-list">
-              <div class="takeaway-item">
-                <span class="takeaway-mark">1</span>
-                <span><strong>What is working</strong></span>
-              </div>
-              <div class="takeaway-item">
-                <span class="takeaway-mark">2</span>
-                <span><strong>What to revise</strong></span>
-              </div>
-              <div class="takeaway-item">
-                <span class="takeaway-mark">3</span>
-                <span><strong>What comes next</strong></span>
-              </div>
-            </div>
-          </div>
         </div>
         <div class="card feedback-preview">
           <p class="eyebrow" style="color:var(--gold-dark)">Inside the Feedback</p>
@@ -1739,20 +1946,20 @@
             <input id="clientName" name="name" class="input" type="text" placeholder="Your Name" required />
             <input id="clientEmail" name="email" class="input" type="email" placeholder="Your Email" required />
             <div>
-              <p class="eyebrow">Support Type</p>
+              <p class="eyebrow">Feedback Option</p>
               <div class="package-options">
                 <label class="package-option" data-package="edits">
                   <input type="radio" name="supportType" value="Line-by-line edits only" checked />
                   <span>
-                    <strong><span>Line-by-line edits</span><span class="package-price" data-price="edits">$69</span></strong>
-                    <span class="muted small">Detailed comments, structure notes, and polish directly on the essay draft.</span>
+                    <strong><span>Written Feedback</span><span class="package-price" data-price="edits">$69</span></strong>
+                    <span class="muted small">Comments, structure notes, and final polish on your draft.</span>
                   </span>
                 </label>
                 <label class="package-option" data-package="call">
                   <input type="radio" name="supportType" value="Edits plus 30 minute video call" />
                   <span>
-                    <strong><span>Edits + 30 minute video call</span><span class="package-price" data-price="call">$99</span></strong>
-                    <span class="muted small">Line-by-line feedback plus a 30 minute strategy call to talk through the essay, story, and next steps.</span>
+                    <strong><span>Feedback + Zoom</span><span class="package-price" data-price="call">$99</span></strong>
+                    <span class="muted small">Written feedback plus a 30 minute call to talk through next steps.</span>
                   </span>
                 </label>
               </div>
