@@ -1,0 +1,16 @@
+<svg width="520" height="150" viewBox="0 0 520 150" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title">
+  <title id="title">College of Charleston Charleston Fellows Program logo</title>
+  <g transform="translate(8 10)">
+    <path d="M37 13H100V46H81V31H58L35 54V95L58 118H100V86H81V101H58L52 95V54L58 48H81V63H100V119H37L15 97V35L37 13Z" fill="#F7F4EA" stroke="#8A2433" stroke-width="6"/>
+    <path d="M37 13H100V46H81V31H58L35 54V95L58 118H100V86H81V101H58L52 95V54L58 48H81V63H100V119H37L15 97V35L37 13Z" stroke="#A68B4A" stroke-width="3"/>
+    <rect x="0" y="57" width="120" height="26" fill="#8A2433"/>
+    <text x="60" y="76" text-anchor="middle" fill="#FFFFFF" font-family="Georgia, serif" font-size="16" font-weight="700" letter-spacing="1.2">CHARLESTON</text>
+  </g>
+  <rect x="155" y="20" width="2" height="112" fill="#8A2433"/>
+  <g fill="#8A2433" font-family="Avenir Next, Arial, sans-serif">
+    <text x="182" y="52" font-size="30" font-weight="600" letter-spacing="9">COLLEGE OF</text>
+    <text x="180" y="96" font-size="48" font-weight="800" letter-spacing="2">CHARLESTON</text>
+    <text x="182" y="126" font-size="27" font-weight="500" letter-spacing="3">CHARLESTON FELLOWS</text>
+    <text x="182" y="148" font-size="27" font-weight="500" letter-spacing="3">PROGRAM</text>
+  </g>
+</svg>

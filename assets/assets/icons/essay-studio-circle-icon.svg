@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" role="img" aria-labelledby="title desc">
+  <title id="title">The Essay Studio Circular Icon</title>
+  <desc id="desc">A circular navy and gold pen-nib mark for The Essay Studio.</desc>
+  <defs>
+    <radialGradient id="circleGlow" cx="50%" cy="42%" r="62%">
+      <stop offset="0%" stop-color="#123454"/>
+      <stop offset="58%" stop-color="#081D35"/>
+      <stop offset="100%" stop-color="#061527"/>
+    </radialGradient>
+    <filter id="softShadow" x="-25%" y="-25%" width="150%" height="150%">
+      <feDropShadow dx="0" dy="20" stdDeviation="26" flood-color="#020817" flood-opacity=".32"/>
+    </filter>
+    <clipPath id="circleClip">
+      <circle cx="540" cy="540" r="535"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#circleClip)">
+    <circle cx="540" cy="540" r="535" fill="url(#circleGlow)"/>
+    <circle cx="540" cy="540" r="480" fill="none" stroke="#E7BE70" stroke-width="14" opacity=".95"/>
+    <circle cx="540" cy="540" r="434" fill="none" stroke="#FAF7F2" stroke-width="2" opacity=".22"/>
+    <g transform="translate(175 98) scale(7.3)" filter="url(#softShadow)">
+      <path d="M18 104V44C18 22 31 10 50 10s32 12 32 34v60"
+        fill="none" stroke="#E7BE70" stroke-width="12" stroke-linecap="square" stroke-linejoin="round"/>
+      <path d="M50 8 72 72 62 100H38L28 72Z"
+        fill="#FAF7F2" stroke="rgba(8,29,53,.28)" stroke-width="1.5"/>
+      <path d="M50 58c7 0 12 5 12 12v20H38V70c0-7 5-12 12-12Z"
+        fill="#081D35" stroke="#FAF7F2" stroke-width="4"/>
+      <path d="M50 12v44M50 92v18"
+        fill="none" stroke="#081D35" stroke-width="3.5" stroke-linecap="round"/>
+    </g>
+  </g>
+</svg>

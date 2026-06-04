@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2048 976" role="img" aria-labelledby="title">
+  <title id="title">NC State University</title>
+  <rect x="10" y="90" width="2028" height="876" fill="#E00000"/>
+  <g fill="#FFFFFF" text-anchor="middle">
+    <text x="1024" y="520" font-family="Arial Black, Impact, Helvetica, sans-serif" font-size="300" font-weight="900" letter-spacing="20">NC STATE</text>
+    <text x="1024" y="830" font-family="Arial Narrow, Helvetica Neue, Arial, Helvetica, sans-serif" font-size="238" font-weight="300" letter-spacing="34">UNIVERSITY</text>
+  </g>
+</svg>
